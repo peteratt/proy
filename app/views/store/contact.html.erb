@@ -1,0 +1,16 @@
+<h1>ERb</h1>
+
+El formato ERb o .erb es HTML extendido con anotaciones Ruby, delimitadas por <strong>
+&lt% </strong> o <strong> &lt%= </strong> y <strong> %&gt </strong>, como en el
+siguiente ejemplo
+
+<ul>
+    <li> Anotación no visible: <% "ESTO NO SE VE" %> </li>
+    <li> Anotación visible: <%= "ESTO SI SE VE" %> </li>
+    <li> Anotación no visible: <% t=Time.now %> </li>
+    <li> Anotación visible: <%= "HOY ES:" + t.to_s %> </li>
+</ul>
+
+También podemos genera un enlace al recurso (página) <strong> Home </strong> con el
+siguiente hiperenlace: <%= link_to('Home', store_home_path) %>
+Rails ejecuta el código Ruby y lo inserta en la página HTML antes de generar la página.
